@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           icon: Icon(Icons.audiotrack),
           label: 'melodies',
         ),
-      ], showSelectedLabels: false, showUnselectedLabels: false),
+      ], iconSize: 30, showSelectedLabels: false, showUnselectedLabels: false),
     );
   }
 }
