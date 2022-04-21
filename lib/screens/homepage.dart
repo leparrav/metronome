@@ -17,8 +17,21 @@ class _HomePageState extends State<HomePage> {
       // TODO: @Luis to create the body layout
       body: Container(),
 
-      // TODO: @Brano to create the bottom navigation bar
-      bottomNavigationBar: BottomNavigationBar(items: const []),
+      bottomNavigationBar:
+          BottomNavigationBar(items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.volume_up),
+          label: 'mute',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.play_arrow),
+          label: 'play',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.audiotrack),
+          label: 'melodies',
+        ),
+      ], showSelectedLabels: false, showUnselectedLabels: false),
     );
   }
 }
