@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class BeatsComponent extends StatefulWidget {
   const BeatsComponent({Key? key}) : super(key: key);
@@ -8,15 +9,27 @@ class BeatsComponent extends StatefulWidget {
 }
 
 class _BeatsComponentState extends State<BeatsComponent> {
+  String _beatsTempo = '4/4';
+
   @override
-  void initState() {
+  initState() {
     super.initState();
+
+    SharedPreferences.getInstance().then((sp) => {
+          setState(() {
+            sp.setString('beatsTempo', '6/4').then((value) => {
+                  setState(() {
+                    _beatsTempo = sp.getString('beatsTempo') ?? '4/4';
+                  })
+                });
+          })
+        });
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      '5/4',
+    return Text(
+      _beatsTempo,
     );
   }
 }

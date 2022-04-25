@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
       ),
 
       // TODO: @Brano to create the bottom navigation bar
-      bottomNavigationBar: BottomNavigationBar(items: const []),
+      // bottomNavigationBar: BottomNavigationBar(items: const []),
     );
   }
 }
