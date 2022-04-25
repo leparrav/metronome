@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/beats_configuration.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -16,8 +18,9 @@ class _HomePageState extends State<HomePage> {
 
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(), // TODO: @Luis Component for beats setup X/4 - It reads from the configuration
+            const BeatsComponent(), // TODO: @Luis Component for beats setup X/4 - It reads from the configuration
             Container(), // TODO: @Luis Component for the current beat (input index?)
             Container(), // TODO: @Ermek Component for the increase / decrease BPM
             Container(), // TODO: @Brano Component for carousel slide of "chord settings"
