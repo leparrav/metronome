@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../components/app_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +14,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // TODO: @Ermek to create top bar component
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        title: const Text(''),
+        elevation: 0,
+        leading: const PopUpItems(),
+        actions: [
+          PopupMenuButton(
+              icon: Icon(
+                Icons.menu,
+                color: Colors.grey[600],
+              ),
+              itemBuilder: (context) => [
+                    const PopupMenuItem(
+                      child: Text('About'),
+                    ),
+                    const PopupMenuItem(
+                      child: Text('Chords'),
+                    )
+                  ])
+        ],
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+      ),
 
       body: SafeArea(
         child: Column(
