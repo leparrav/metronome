@@ -17,11 +17,9 @@ class _BeatsComponentState extends State<BeatsComponent> {
 
     SharedPreferences.getInstance().then((sp) => {
           setState(() {
-            sp.setString('beatsTempo', '6/4').then((value) => {
-                  setState(() {
-                    _beatsTempo = sp.getString('beatsTempo') ?? '4/4';
-                  })
-                });
+            setState(() {
+              _beatsTempo = sp.getString('beatsTempo') ?? '4/4';
+            });
           })
         });
   }

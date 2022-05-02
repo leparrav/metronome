@@ -135,13 +135,6 @@
             </list>
           </value>
         </entry>
-        <entry key="metronome">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="path">
           <value>
             <list>
@@ -372,7 +365,6 @@
       <root url="file://$USER_HOME$/Tools/flutter/packages/flutter/lib" />
       <root url="file://$USER_HOME$/Tools/flutter/packages/flutter_test/lib" />
       <root url="file://$USER_HOME$/Tools/flutter/packages/flutter_web_plugins/lib" />
-      <root url="file://$PROJECT_DIR$/../lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
