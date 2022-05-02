@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../constants.dart';
+
 class BeatsComponent extends StatefulWidget {
   const BeatsComponent({Key? key}) : super(key: key);
 
@@ -18,7 +20,9 @@ class _BeatsComponentState extends State<BeatsComponent> {
     SharedPreferences.getInstance().then((sp) => {
           setState(() {
             setState(() {
-              _beatsTempo = sp.getString('beatsTempo') ?? '4/4';
+              _beatsTempo = sp.getString(
+                      SharedPreferencesOptions.beatsTempo.toString()) ??
+                  '4/4';
             });
           })
         });
