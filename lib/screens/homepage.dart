@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/custom_bottom_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,21 +27,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      bottomNavigationBar:
-          BottomNavigationBar(items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.volume_up),
-          label: 'mute',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.play_arrow),
-          label: 'play',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.audiotrack),
-          label: 'melodies',
-        ),
-      ], iconSize: 30, showSelectedLabels: false, showUnselectedLabels: false),
+      bottomNavigationBar: const CustomBottomNavigationBar()
     );
   }
 }
