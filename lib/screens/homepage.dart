@@ -14,8 +14,17 @@ class _HomePageState extends State<HomePage> {
       // TODO: @Ermek to create top bar component
       appBar: AppBar(),
 
-      // TODO: @Luis to create the body layout
-      body: Container(),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(), // TODO: @Luis Component for beats setup X/4 - It reads from the configuration
+            Container(), // TODO: @Luis Component for the current beat (input index?)
+            Container(), // TODO: @Ermek Component for the increase / decrease BPM
+            Container(), // TODO: @Brano Component for carousel slide of "chord settings"
+            Container() // TODO: @Brano Component for the progress bar for the next beat
+          ],
+        ),
+      ),
 
       bottomNavigationBar:
           BottomNavigationBar(items: const <BottomNavigationBarItem>[
