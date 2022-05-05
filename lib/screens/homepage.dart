@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/custom_bottom_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,8 +27,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      // TODO: @Brano to create the bottom navigation bar
-      bottomNavigationBar: BottomNavigationBar(items: const []),
+      bottomNavigationBar: const CustomBottomNavigationBar()
     );
   }
 }
