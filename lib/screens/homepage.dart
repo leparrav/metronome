@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/custom_bottom_navigation_bar.dart';
 
 import '../components/beats_configuration.dart';
 
@@ -29,8 +30,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      // TODO: @Brano to create the bottom navigation bar
-      // bottomNavigationBar: BottomNavigationBar(items: const []),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
